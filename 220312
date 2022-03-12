@@ -1,0 +1,43 @@
+o <table> 태그 : 테이블(표)
+ - 기본 태그
+ <table> </table>: 테이블 선언
+ <tr> </tr>: 테이블의 한 행 (table row)
+ <td> </td>: 각 행의 셀(열) (table date)
+
+ - 추가 기능
+ <table border = "숫자"> : 셀 테두리
+ <td> &nbsp; </td> : 빈 셀 작성
+ <td> <img srd = " "> </td> : 테이블에 이미지 삽입
+ <caption> </caption> : 테이블 제목 
+  align 속성 - top(위), bottom(아래)에 작성
+ <th> </th> : 셀 제목 (강조)
+
+ - 테이블 속성
+ 1) align="문자열" : 홈페이지 상 테이블의 위치
+  left(왼쪽), right(오른쪽)
+  가운데 정렬은 align으로 불가능
+  -> <center> </center> 또는 <p align="center"> </p>
+ 2) border="숫자" : 테이블 외부 두께
+ 3) cellspacing="숫자" : 셀과 셀 사이 여백
+  숫자 만큼 셀의 두께가 두꺼워지는 효과
+    cellpadding="숫자" : 텍스트와 셀 사이 여백
+ 5) width, height="숫자" : 테이블 크기 조절
+ 6) bgcolor="색상" : 테이블 배경색
+    bordercolor="색상" : 테이블 테두리 색
+    background="파일명" : 테이블 배경이미지
+
+ - <tr>태그 속성
+ 1) align : 행 전체 정렬 방식
+  left(디폴트), right, center
+ 2) width, height : 가로 세로 넓이
+ 3) bgcolor, background : 색상, 배경 이미지
+
+ - <td>태그, <th>태그 속성
+ 1) valign : 셀의 수직 정렬 방식
+  top, middle(디폴트), bottom
+ 2) align : 셀의 수평 정렬 방식
+  left(디폴트), right, center
+ 3) width, height : 가로 세로 넓이
+ 4) bgcolor, background : 색상, 배경 이미지
+ 5) rowspan="숫자" : n개 행 합치기
+    colspan="숫자" : n개 열 합치기
