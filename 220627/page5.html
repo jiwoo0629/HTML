@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>회원가입 폼 만들기</title>
+ </head>
+ <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+ <center>
+ <table width="680" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+	<!--기본 정보-->
+	<tr>
+		<td colspan="2"><font color="#FFFFFF"><b>o 기본정보</b></font></td>
+	</tr>
+	<!--아이디-->
+	<tr>
+		<td align="right" bgcolor="#f4f4f4"><font color="#FF9900">*</font>아이디&nbsp;</td>
+		<td bgcolor="#ffffff">
+			<input type="text" maxlenght="12" name="userid"> <!--사용자가 text를 입력-->
+			<font color="#ff9900" size="2">(4~12자 영문자/숫자 가능)</font>
+		</td>
+	</tr>
+	<!--비밀번호-->
+	<tr>
+		<td align="right" bgcolor="#f4f4f4"><font color="#FF9900">*</font>비밀번호&nbsp;</td>
+		<td bgcolor="#ffffff">
+			<input type="text" maxlenght="8" name="password">
+			<font color="#ff9900" size="2">(4~8자 이내 가능)</font>
+		</td>
+	</tr>
+	<!--비밀번호 확인-->
+	<tr>
+		<td align="right" bgcolor="#f4f4f4"><font color="#FF9900">*</font>비밀번호 확인&nbsp;</td>
+		<td bgcolor="#ffffff">
+			<input type="text" maxlenght="8" name="password">
+			<font color="#ff9900" size="2">(위 비밀번호와 동일하게 입력해 주세요)</font>
+		</td>
+	</tr>
+	<!--이름-->
+	<tr>
+		<td align="right" bgcolor="#f4f4f4"><font color="#FF9900">*</font>이름(한글)&nbsp;</td>
+		<td bgcolor="#ffffff">
+			<input type="text" maxlenght="30" name="name">
+			<font color="#ff9900" size="2">(예:홍길동)</font>
+		</td>
+	</tr>
+	<!--이메일-->
+	<tr>
+		<td align="right" bgcolor="#f4f4f4"><font color="#FF9900">*</font>이메일&nbsp;</td>
+		<td bgcolor="#ffffff">
+			<input type="text" maxlenght="30" name="email">
+		</td>
+	</tr>
+	<!--개인 신상정보-->
+	<tr>
+		<td colspan="2"><font color="#FFFFFF"><b>o 개인 신상 정보</b></font></td>
+	</tr>
+	<!--주소-->
+	<tr>
+		<td align="right" bgcolor="#f4f4f4">주소&nbsp;</td>
+		<td bgcolor="#ffffff">
+			<input type="text" maxlength="15" name="addressnum" size="15" readonly>&nbsp;
+			<input type="button" value="우편번호 찾기"> <!--button을 클릭하면 우편번호를 찾는 파트로 이동 (이 부분은 javascript와 연관됨)-->
+			<input type="text" maxlength="50" name="address" size="50">&nbsp;			
+		</td>
+	</tr>
+	<!--전화/휴대폰-->
+	<tr>
+		<td align="right" bgcolor="#f4f4f4">전화/휴대폰&nbsp;</td>
+		<td bgcolor="#ffffff">
+			<input type="text" maxlength="15" name="cellphone" size="15" readonly>&nbsp;					
+		</td>
+	</tr>
+	<!--직업-->
+	<tr>
+		<td align="right" bgcolor="#f4f4f4">직업&nbsp;</td>
+		<td bgcolor="#ffffff">
+			<select name="job"> <!--단축 메뉴 형식의 목록을 만들 때 사용-->
+			<!--여러 옵션들 중 하나를 선택-->
+			<option value="" selected>직업을 선택하세요</option>	
+			<option value="0">무직</option>
+			<option value="1">학생</option>
+			<option value="2">컴퓨터/인터넷</option>
+			<option value="3">공무원</option>
+			<option value="4">군인</option>
+			<option value="5">서비스업</option>
+			<option value="6">교육</option>
+			<option value="7">기타</option>
+			</select>
+		</td>
+	</tr>
+	<!--취미-->
+	<tr>
+		<td align="right" bgcolor="#f4f4f4">취미&nbsp;</td>
+		<td bgcolor="#ffffff">
+			<input type="checkbox" value="1" name="hobby1">독서	<!--라디오 버튼: 단 하나만 선택-->
+			<input type="checkbox" value="2" name="hobby2">등산
+			<input type="checkbox" value="3" name="hobby3">낚시
+			<input type="checkbox" value="4" name="hobby4">영화감상
+		</td>
+	</tr>
+	<!--알게된 경로-->
+	<tr>
+		<td align="right" bgcolor="#f4f4f4">알게된 경로&nbsp;</td>
+		<td bgcolor="#ffffff">
+			<input type="radio" value="1" name="inputpath">TV/신문/잡지 <!--체크상자: 동시에 여러개 선택-->
+			<input type="radio" value="2" name="inputpath">인터넷
+			<input type="radio" value="3" name="inputpath">동료
+			<input type="radio" value="4" name="inputpath">기타
+		</td>
+	</tr>
+	<!--회원가입-->
+	<tr bgcolor="#ffffff">
+		<td height="30" colspan=2 align="center">
+			<input type="submit" name="regist" value="회원가입"> <!--입력한 데이터를 서버로 전송-->
+			<input type="reset" name="cancle" value"취소"> <!--입력한 데이터 초기화-->
+		</td>
+	</tr>
+ </table>
+ </center>
+ </body>
+</html>
