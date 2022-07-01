@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>HTML7</title>
+  <style>
+  <!--
+	.normal {font-size:20pt}
+	.letter-spacing {letter-spacing:10px; font-size:20pt} 
+	.word-spacing {word-spacing:20px; font-size:20pt} 
+	.line-height {line-height:40pt}
+	.white-space {white-space:nowrap}
+  -->
+  </style>
+ </head>
+ <body>
+  <p class="normal">
+  아무 스타일도 지정하지 않았을 때의 효과입니다.<br>
+  아래의 모습과 비교해 봅시다.<br>
+  </p>
+  <p class="letter-spacing">
+  글자 간격 스타일을 지정했을 때의 모습입니다.<br>
+  글자가 더 벌어져서 나오는 것을 볼 수 있습니다.<br>
+  </p>
+  <p class="word-spacing">
+  단어 간격 스타일을 지정했을 때의 모습입니다.<br>
+  글자 간은 아니지만 단어 간의 간격이 더 벌어져서 나오는 것을 볼 수 있습니다.<br>
+  </p>
+  <p class="line-height">
+  줄 간격 스타일을 지정했을 때의 모습입니다.<br>
+  두 줄 사이가 더 벌어져 있는 모습을 볼 수 있습니다.<br>
+  </p>
+  <table width="300" cellpadding="10" cellspacing="5" bgcolor="#cc9933">
+  <tr bgcolor="white">
+  	<td>테이블의 폭이 300이므로 테이블의 폭에 맞추어 자동으로 글바꿈이 됩니다.</td>
+  </tr>
+  </table>
+  <br>
+  <table width="300" cellpadding="10" cellspacing="5" bgcolor="#3366cc">
+  <tr bgcolor="white">
+    <td class="white-space"> 테이블의 폭이 300이지만 'nowrap' 속성을 사용했으므로 글의 길이에 맞춰 테이블의 폭이 자동으로 늘어납니다.</td>
+  </tr>
+  </table>
+ </body>
+</html>
