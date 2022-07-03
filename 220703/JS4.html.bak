@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>JS4</title>
+ </head>
+ <body>
+  <script>
+  <!--
+	var global_1=10; //function 외부에서 var로 선언됐으므로 전역변수
+	global_2=20; //선언부 없이 선언됐으므로 전역변수
+
+	function func() {
+		var local_1=30; //function 내부에서 var로 선언됐으므로 지역변수
+		global_3=40; //function 내부에서 선언됐지만 선언부 없이 선언됐으므로 전역변수
+
+		document.write("local_1="+local_1+"<br>"+"<hr>");
+		document.write("global_1="+global_1+"<br>");
+		document.write("global_2="+global_2+"<br>");
+		document.write("global_3="+global_3+"<br>"+"<hr>");
+	}
+	func();
+	global_4=prompt("값을 입력하세요",""); //사용자로부터 값을 입력받아 그 값을 변수에 저장
+	document.write("global_1="+global_1+"<br>");
+	document.write("global_2="+global_2+"<br>");
+	document.write("global_3="+global_3+"<br>");
+	document.write("global_4="+global_4+"<br>"+"<hr>");
+	//document.write("local_1="+local_1+"<br>"+"<hr>"); //local_1 변수는 function 내에서만 유효한 지역변수이므로 화면에 출력되지 않음
+	ev=eval("10+12");
+	document.write("10+12="+ev+"<br>"+"<hr>"); //수식 형태로 입력된 문자열을 계산해주는 함수
+	pi_1=parseInt("24"); //문자열을 정수로 바꿔주는 함수
+	document.write("pi_1="+pi_1+"<br>"); //숫자로 바꾸어 출력
+	pi_2=parseInt("abc");
+	document.write("pi_2="+pi_2+"<br>"); //문자열에 숫자가 하나도 없을 경우 NaN 출력
+	nan=isNaN("abc");
+	document.write("nan="+nan+"<br>"); //주어진 값에 숫자가 하나도 없을 경우 false, 이 외에 문자일 경우 true
+  //-->
+  </script>
+ </body>
+</html>
