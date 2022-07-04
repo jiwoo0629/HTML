@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>function</title>
+  <script language="JavaScript">
+  <!--
+  	//사용자 정의 함수 (매개변수, 리턴 값이 있는 함수)
+	function calc(x, y, op) {
+		var result;
+		switch(op) {
+			case "+" :
+			result=x+y;
+			break;
+			case "-" :
+			result=x-y;
+			break;
+			case "*" :
+			result=x*y;
+			break;
+			case "/" :
+			result=x/y;
+			break;
+			default:
+			result="잘못된 연산자 입니다.";
+		}
+		return result;	//함수를 호출한 곳으로 result 값 리턴
+	}
+  //-->
+  </script>
+ </head>
+ <body>
+ <script language="JavaScript">
+  a=prompt("숫자를 입력하세요","");
+  a=parseInt(a);
+  b=prompt("숫자를 입력하세요","");
+  b=parseInt(b);
+  document.write("a+b="+calc(a, b, "+")+"<br>");
+  document.write("a-b="+calc(a, b, "-")+"<br>");
+  document.write("a*b="+calc(a, b, "*")+"<br>");
+  document.write("a/b="+calc(a, b, "/")+"<br>");
+  document.write("a@b="+calc(a, b, "@")+"<br>");
+ </script>
+ </body>
+</html>
