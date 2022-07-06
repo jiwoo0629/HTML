@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Event1</title>
+  <script langauge="JavaScript">
+  <!--
+	function start() {
+		name = prompt("이름을 입력하세요.");
+		alert(name+"님 안녕하세요!");
+	}
+	function end() {
+		alert(name+"님 다음에 또 와주세요!");
+	}
+  //-->
+  </script>
+ </head>
+ <!-- 
+ on이벤트 이름= "이벤트 처리 함수/메소드" 
+ Load : 웹 브라우저에서 문서를 읽어올 때
+ Unload : 웹 브라우저에서 문서가 사라질 때
+ -->
+ <body onLoad="start()" onUnload="end()">
+ 이벤트 처리 예제
+ 1. 글자에 마우스 포인터를 위치하면 글자 색상이 바뀝니다.
+ <!--기본 색상 : #6699cc, 마우스 포인터 위치 시 : #6699cc-->
+ <div style="font-size:14pt;color:#6699cc" onMouseOver="this.style.color='#FF9900'" onMouseOut="this.style.color='#6699cc'">
+ 여기에 마우스 포인터를 올려보세요
+ </div>
+ 2. 테이블의 특정 행에 마우스 포인터를 위치하면 행의 배경 색상이 바뀝니다.
+ <table width=600 border=1 bordercolor=#ffffff cellpadding=3>
+ <tr bgcolor="#ffffcc" onMouseOver="this.style.background='#ffcc99'" onMouseOut="this.style.background='ffffcc'">
+	<td>&nbsp;제목</td>
+	<td>&nbsp;조회수</td>
+ </tr>
+ <tr bgcolor="#ffffcc" onMouseOver="this.style.background='#ffcc99'" onMouseOut="this.style.background='ffffcc'">
+	<td>&nbsp;첫번째 이야기</td>
+	<td>&nbsp;15</td>
+ </tr>
+ <tr bgcolor="#ffffcc" onMouseOver="this.style.background='#ffcc99'" onMouseOut="this.style.background='ffffcc'">
+	<td>&nbsp;두번째 이야기</td>
+	<td>&nbsp;10</td>
+ </tr>
+ <tr bgcolor="#ffffcc" onMouseOver="this.style.background='#ffcc99'" onMouseOut="this.style.background='ffffcc'">
+	<td>&nbsp;세번째 이야기</td>
+	<td>&nbsp;12</td>
+ </tr>
+ </table>
+ 3. 흐르는 문자로 인사하기
+
+ </body>
+</html>

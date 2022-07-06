@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Event2</title>
+  <script>
+  <!--
+	var position=0;
+	var text="";
+	function scroll_text() {
+		var msg=document.myform.mytxt_1.value; //입력 상자의 값을 얻어옴
+		movemsg=msg.substring(0,1);
+		msg=msg.substring(1)+movemsg;
+		document.myform.mytxt_1.value=msg;
+		setTimeout("scroll_text()", 150); //지정된 시간마다 해당 함수를 호출함		
+	}
+	function type_text() {
+		var msg="제 홈페이지에 방문해주셔서 감사합니다. 즐겁고 유익한 시간 되시기 바랍니다 ^~^";
+		text=msg.substring(0, position);
+		document.myform.mytxt_2.value=text;
+		position=position+1;
+		if(position>msg.length) {
+			position=0;
+			text="";
+		}
+		setTimeout("type_text()", 150);
+	}
+	function click_event(e) {
+		mystr = "스크린 x좌표 : " + e.screenX + "\n";
+		mystr += "스크린 y좌표 : " + e.screenY + "\n";
+		mystr += "클라이언트 x좌표 : " + e.clientX + "\n";
+		mystr += "클라이언트 y좌표 : " + e.clientY + "\n";
+		alert(mystr); //화면에 mystr 문구를 띄움
+	}
+  //-->
+  </script>
+ </head>
+ <!--미리 구현해놓은 함수들 중 사용할 함수를 onLoad를 통해 사용 가능-->
+ <body onLoad="scroll_text() ; type_text()" onClick="click_event(event)">
+ <center>
+ 1. 흐르는 문자로 인사하기
+	<form name="myform"> 
+		<input type="text" value="제 홈페이지에 방문해주셔서 감사합니다. 즐겁고 유익한 시간 되시기 바랍니다 ^~^     " name="mytxt_1" size=88><br>
+		<input type="text" name="mytxt_2" size=88>
+	</form>
+ </center> 
+ 2. 화면 상에서 클릭 정보 보기 <br>
+ 화면을 클릭해보세요.
+ </body>
+</html>
