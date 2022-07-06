@@ -1,0 +1,66 @@
+Window 객체 
+1) 메소드
+ - open(): 새로운 창을 열 때
+ - close() : 창을 닫을 때 
+
+Document 객체 : 문서 정보를 알려줌
+1) 최상위 계층의 Window 객체의 하위 계층으로, window가 생략됨
+2) 메소드
+ - open() : 지정된 창에 문서를 출력할 준비
+ - close() : 지정된 창에 문서의 출력을 종료
+ - clear() : 문서의 내용을 지움
+ - write()/writeln() : 문서에 내용을 출력
+
+History 객체 : 웹 브라우저가 최근 방문한 주소, 즉 히스토리 목록에 대한 정보를 알려줌
+1) length : 히스토리 목록에 저장된 url의 개수
+2) 메소드
+ - back() : 이전페이지로 이동 (<-)
+ - forward() : 다음페이지로 이동 (->)
+
+Location 객체 : 열려 있는 웹 문서의 주소에 대한 정보를 제공
+1) 속성
+   1)href : http :// www.wooshinit.or.kr: 80/ teacher/comm.html #top
+        2)protocol      3)hostname      4)port   5)pathname   6)hashtag
+2) 메소드
+ - reload() : 문서를 다시 불러옴
+ - replace() : 문서를 지정한 웹사이트 주소로 대체
+
+Frame 객체 : 여러 개의 프로임으로 구성된 window에서 각 프레임에 접근할 수 있도록 지원
+1) frames 배열 형태의 객체 변수 (frames[0], frames[1] ...)
+2) name을 통해 frame에 접근 가능
+3) src를 통해 각 frame에 문서 삽입 가능
+
+Anchor 객체 : <a name>로 지정된 특정 위치를 링크 ( document.anchors.속성/메소드() )
+Link 객체 : <a href>로 지정한 하이퍼링크의 정보 제공 ( document.links.속성/메소드() )
+
+Image 객체 : <img>로 삽입한 그림에 대한 정보 제공 ( document.images[그림의 이름].속성/메소드() )
+1) img1 = new Image(); 의 형태로 객체 변수 선언 및 생성
+
+Form 객체 : 작성 폼에 대한 정보 제공, 각종 입력 양식을 포함 (document.폼의 이름.속성/메소드() )
+1) 속성
+ - action : 전송된 데이터를 처리할 서버 측의 url
+ - name : 폼의 이름
+ - target : 입력된 데이터를 서버로 보내고 그 결과를 받아볼 창
+2) 메소드/이벤트 핸들러
+ - submit()/onSubmit() : 입력된 데이터를 서버로 전송 ([submit] 버튼을 클릭하거나 submit() 메소드가 호출될 경우)
+ - reset()/onReset() : 입력 양식을 초기화 ([reset] 버튼을 클릭하거나 reset() 메소드가 호출될 경우)
+
+Text/TextArea 객체 : <input type="text"/"textarea">를 이용해서 형성되는 텍스트상자의 정보 제공, name 속성으로 부여한 이름을 통해 접근 가능
+1) 속성 : type, name, value, defaultvalue
+2) 메소드/이벤트 핸들러
+ - focus()/onFocus() : 텍스트 상자에 커서를 위치 시킴
+ - blur()/onBlur() : 텍스트 상자에 위치한 커서를 사라지게 함
+ - select()/onSelect() : 텍스트 상자에 입력된 값을 모두 선택
+ - onChange() : 텍스트 상자의 내용이 변할 때 발생
+
+Button 객체 : <input type="button">를 이용해서 형성되는 버튼의 정보 제공, name 속성으로 부여한 이름을 통해 접근 가능
+1) 속성 : type, name, value
+2) 메소드/이벤트 핸들러
+ - click()/onclick() : 버튼 클릭 시 발생
+
+Checkbox/Radio 객체 : <input type="checkbox"/"radio">를 이용해서 형성되는 체크상자/라디오버튼 제공, name 속성으로 부여한 이름을 통해 접근 가능
+1) 속성 : checked, defaultChecked, name, type, value
+2) 메소드/이벤트 핸들러
+ - focus()/onFocus() : 체크상자/라디오버튼에 커서를 위치
+ - blur()/onBlur() : 체크상자/라디오버튼에 위치한 커서를 사라지게 함
+ - click()/onClick() : 체크상자/라디오버튼를 클릭했을 때
