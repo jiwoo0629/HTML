@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Layer3</title>
+ </head>
+ <style>
+	/*clip:rect -> 화면에 실제로 보이는 영역 설정*/
+	#clip1 {position:absolute; left:100px; top:100px}
+	#clip2 {position:absolute; left:350px; top:100px; clip:rect(0px 100px 100px 0px)}
+	#clip3 {position:absolute; left:600px; top:100px; clip:rect(0px 150px 100px 0px)}
+	#clip4 {position:absolute; left:850px; top:100px; clip:rect(50px 150px 150px 0px)}
+ </style>
+ <body>
+ <center>
+ <div style="position:absolute; left:100px; top:50px">
+	<table width="1000" cellpadding="5">
+	<tr bgcolor="yellow" align="center">
+		<td width="25%">원본 이미지</td>
+		<td width="25%">clip:rect(0 100 100 0)</td>
+		<td width="25%">clip:rect(0 150 100 0)</td>
+		<td width="25%">clip:rect(50 150 150 0)</td>
+	</tr>
+	</table>
+ </div>
+ <div id="clip1">
+	<img src="image/귀여워.jpg" width="250" border=0>
+ </div>
+ <div id="clip2">
+	<img src="image/귀여워.jpg" width="250" border=0>
+ </div>
+ <div id="clip3">
+	<img src="image/귀여워.jpg" width="250" border=0>
+ </div>
+ <div id="clip4">
+	<img src="image/귀여워.jpg" width="250" border=0>
+ </div>
+ </center>
+ </body>
+</html>

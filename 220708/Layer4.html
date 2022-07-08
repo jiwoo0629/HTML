@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Layer4</title>
+  <style>
+	#layer {position:absolute; left:100px; top:100px; width:500px; height:250px; clip:rect(0px 150px 250px 150px)}
+  </style>
+  <script language="JavaScript">
+  <!--
+  	i=1;
+	function show() {
+		str="rect(0px "+(150+i)+"px 250px "+(150-i)+"px)";
+		document.all.layer.style.clip=str;
+		i++;
+		if(i>150){
+			i=1;
+			return;
+		}
+		setTimeout("show()", 10);
+	}
+	function hide() {
+		str="rect(0px "+(300-i)+"px 250px "+(i)+"px)";
+		document.all.layer.style.clip=str;
+		i++;
+		if(i>150){
+			i=1;
+			return;
+		}
+		setTimeout("hide()", 10);
+	}
+  //-->	
+  </script>
+ </head>
+ <body bgcolor="#ffcc33">
+ <div style="position:absolute; left:100px; top:50px">
+	<input type="button" value="레이어 보이기" onClick="show()">&nbsp;<input type="button" value="레이저 감추기" onClick="hide()">
+ </div>  
+ <div id="layer">
+	<img src="image/귀여워.jpg" border=0 align="left">
+ <div>
+ </body>
+</html>
