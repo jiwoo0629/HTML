@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>PopUp1</title>
+  <link rel="stylesheet" type="text/css" href="common.css"> <!--이미 널리 퍼져 있는 css 사용-->
+  <script language="JavaScript">
+  <!--
+	//팝업창 크기를 자동 조정
+	function winResize() {
+		var Dwidth = parseInt(document.body.scrollWidth);
+		var Dheight = parseInt(document.body.scrollHeight);
+		var divEl = document.createElement("div");
+		divEl.style.position = "absolute";
+		divEl.style.left = "0px";
+		divEl.style.top = "0px";
+		divEl.style.width = "100%";
+		divEl.style.height = "100%";
+
+		document.body.appendChild(divEl);
+		window.resizeBy(Dwidth-divEl.offsetWidth, Dheight-divEl.offsetHeight);
+		document.body.removeChild(divEl);
+	}
+	//팝업창을 화면 중앙에 위치
+	function winCenter() {
+		var x, y;
+		if(self.innerHeight) { //Internet Explorer의 모든 브라우저
+			x=(screen.availWidth-self.innerWidth);
+			y=(screen.availHeight-self.innerHeight);
+		} else if(document.documentElement && document.documentElement.clientHeight) { //Internet Explorer 6 이상
+			x=(screen.availWidth - document.documentElement.clientWidth)/2;
+			y=(screen.availHeight - document.documentElement.clientHeight)/2;
+		} else if(document.body) { //Internet Explorer 6 미만
+			x=(screen.availWidth - document.body.clientWidth)/2;
+			y=(screen.availHeight - document.body.clientHeight)/2;
+		}
+		window.moveTo(x, y);
+	}
+  //-->
+  </script>
+ </head>
+ <body OnLoad="winResize();winCenter()">
+ <center>
+	팝업창입니다.<br>
+	<input type="button" Value="닫기" OnClick="self.close()">
+ </center>
+ </body>
+</html>
